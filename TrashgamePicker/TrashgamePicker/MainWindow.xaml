@@ -1,0 +1,58 @@
+﻿<Window x:Class="TrashgamePicker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TrashgamePicker"
+        mc:Ignorable="d"
+        Title="AbfallSpeisekarte" Height="200" Width="800" ContentRendered="Window_ContentRendered">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1" Grid.ColumnSpan="4"
+              Grid.Row="0">
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Center">
+                <Label Content="Heute gibts:"
+                   FontSize="16"/>
+                <TextBox Name="TextBox_Trashgame"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         HorizontalContentAlignment="Center"/>
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Margin="10">
+                    <Button Name="Button_Delete"
+                            Content="Löschen"
+                            Width="150" Height="30"
+                            FontSize="16"
+                            Margin="5" Click="Button_Delete_Click"/>
+                    <Button Name="Button_Pick"
+                            Content="Würfeln"
+                            Width="150" Height="30"
+                            FontSize="16"
+                            Margin="5" Click="Button_Pick_Click"/>
+                </StackPanel>
+                <Button Name="Button_Reload"
+                        Content="Liste neu laden"
+                        Width="150" Height="30"
+                        FontSize="16"
+                        Margin="5" Click="Button_Reload_Click"/>
+
+            </StackPanel>
+        </Grid>
+        <Label Content="v.1.0.0"
+               Grid.Column="0" Grid.ColumnSpan="6"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Bottom"
+               FontSize="12"/>
+    </Grid>
+</Window>
